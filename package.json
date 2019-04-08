@@ -1,0 +1,25 @@
+{
+  "name": "vmeeting",
+  "version": "1.0.0",
+  "description": "vMeeting Project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vmeeting",
+    "webpack",
+    "vue"
+  ],
+  "author": "wang shiqiang",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "vue": "^2.6.10",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
