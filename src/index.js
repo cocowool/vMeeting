@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Main from './components/Main.vue'
 
 console.log("Hello webpack")
 
@@ -10,6 +11,7 @@ const app = new Vue({
         }
     },
     render(h) {
-        return h(this.ViewComponent)
+        // return h(this.ViewComponent)
+        return h(Main)
     }
 });
