@@ -1,5 +1,15 @@
 import Vue from 'vue'
 import Main from './components/Main.vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+const routes = []
+
+const router = new VueRouter({
+    routes,
+    mode: 'history'
+})
+
 var m = require('./meeting')
 
 console.log("Hello webpack")
@@ -15,5 +25,6 @@ const app = new Vue({
     render(h) {
         // return h(this.ViewComponent)
         return h(Main)
-    }
+    },
+    router
 });

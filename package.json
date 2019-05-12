@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/cocowool/vMeeting.git"
   },
+  "homepage": "https://github.com/cocowool/vMeeting",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot",
