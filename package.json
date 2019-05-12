@@ -2,6 +2,10 @@
   "name": "vmeeting",
   "version": "1.0.0",
   "description": "vMeeting Project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cocowool/vMeeting.git"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot",
@@ -23,5 +27,8 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "vue-router": "^3.0.6"
   }
 }
