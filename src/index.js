@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import Main from './components/Main.vue'
+import Home from './components/Home.vue'
 import Calendar from './components/Calendar.vue'
 import About from './components/About.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 const routes = [
+    { path: '/', component: Home },
     { path: '/cal', component: Calendar }, 
-    { path: '/ablout', component: About }
+    { path: '/about', component: About }
 ]
 
 const router = new VueRouter({
@@ -23,7 +25,7 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     template: '<Main/>',
-    components: { Main, Calendar, About },
+    components: { Main },
     // computed: {
     //     ViewComponent(){
     //         require('./components/Main.vue')

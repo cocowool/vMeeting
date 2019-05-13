@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div>Left Column</div>
         <div>
-            <router-link v-bind="/cal">Calendar</router-link>
-            <router-link v-bind="/cal">Calendar</router-link>
-            <router-view></router-view>
+            <router-link to="/">Home</router-link>
+            <router-link to="/cal">Calendar</router-link>
+            <router-link to="/about">About</router-link>
+            <router-view class="view"></router-view>
         </div>
     </div>
 </template>
