@@ -5,6 +5,9 @@ import Calendar from './components/Calendar.vue'
 import About from './components/About.vue'
 import VueRouter from 'vue-router'
 
+//Import bootstrap style
+import 'bootstrap/dist/css/bootstrap.css'
+
 Vue.use(VueRouter)
 const routes = [
     { path: '/', component: Home },

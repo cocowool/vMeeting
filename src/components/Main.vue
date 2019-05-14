@@ -1,9 +1,11 @@
 <template>
-    <div>
-        <div>
-            <router-link to="/">Home</router-link>
-            <router-link to="/cal">Calendar</router-link>
-            <router-link to="/about">About</router-link>
+    <div id="main-container">
+        <div id="top-menu">
+            <router-link to="/">首页</router-link>
+            <router-link to="/cal">日程表</router-link>
+            <router-link to="/about">我的预定</router-link>
+        </div>
+        <div id="main-view">
             <transition name="fade" mode="out-in">
                 <router-view class="view"></router-view>
             </transition>

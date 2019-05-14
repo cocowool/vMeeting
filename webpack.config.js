@@ -7,7 +7,8 @@ module.exports = {
     entry: './src/index.js',
     module: {
         rules: [
-            { test: /\.vue$/, loader: 'vue-loader', exclude: '/node_modules/'}
+            { test: /\.vue$/, loader: 'vue-loader', exclude: '/node_modules/'},
+            { test: /\.css$/, loader: 'css-loader', exclude: '/node_modules/'}
         ]
     },
     plugins: [
