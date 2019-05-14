@@ -1,10 +1,10 @@
 <template>
     <div id="main-container">
-        <div id="top-menu">
+        <nav id="top-menu">
             <router-link to="/">首页</router-link>
             <router-link to="/cal">日程表</router-link>
             <router-link to="/about">我的预定</router-link>
-        </div>
+        </nav>
         <div id="main-view">
             <transition name="fade" mode="out-in">
                 <router-view class="view"></router-view>
