@@ -1,6 +1,6 @@
 <template>
     <div id="home">
-        Home
+        欢迎访问考勤管理系统。
     </div>
 </template>
 <script>

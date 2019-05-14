@@ -1,6 +1,18 @@
 <template>
     <div id="calendar">
-        Calendar
+        <div>
+            <a href="#">月视图</a>
+            <a href="#">周视图</a>
+        </div>
+        <div>
+            <table class="table">
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </template>
 <script>
