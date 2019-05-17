@@ -3,6 +3,7 @@ import Main from './components/Main.vue'
 import Home from './components/Home.vue'
 import Calendar from './components/Calendar.vue'
 import About from './components/About.vue'
+import Meeting from './components/Meeting.vue'
 import VueRouter from 'vue-router'
 
 //Import bootstrap style
@@ -15,7 +16,9 @@ Vue.use(VueRouter)
 const routes = [
     { path: '/', component: Home },
     { path: '/cal', component: Calendar }, 
-    { path: '/about', component: About }
+    { path: '/about', component: About },
+    { path: '/meeting/:id', component: Meeting }
+    // { path: '*', component: Home }
 ]
 
 const router = new VueRouter({
