@@ -3,6 +3,7 @@
         <div>
             <a href="#">月视图</a>
             <a href="#">周视图</a>
+            <a href="#">会议预订</a>
         </div>
         <div>
             <table class="table">
