@@ -1,12 +1,22 @@
 <template>
     <div id="calendar">
         <div>
-            <a href="#">月视图</a>
-            <a href="#">周视图</a>
-            <a href="#">会议预订</a>
+            <router-link to="/cal/month">月视图</router-link>
+            <router-link to="/cal/week">周视图</router-link>
+            <router-link to="/meeting/add">会议预订</router-link>
         </div>
         <div>
-            <table class="table">
+            <table class="table table-striped">
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                </tr>
                 <tr>
                     <td>A</td>
                     <td>B</td>
@@ -18,6 +28,12 @@
 </template>
 <script>
 export default {
-    name: 'calendar'
+    name: 'calendar',
+    watch: {
+        '$route' (to, from){
+            console.log("Route to : " + to);
+            console.log("Route from" + from);
+        }
+    }
 }
 </script>

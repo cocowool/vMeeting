@@ -16,6 +16,7 @@ Vue.use(VueRouter)
 const routes = [
     { path: '/', component: Home },
     { path: '/cal', component: Calendar }, 
+    { path: '/cal/:mode', component: Calendar },
     { path: '/about', component: About },
     { path: '/meeting/:id', component: Meeting }
     // { path: '*', component: Home }
