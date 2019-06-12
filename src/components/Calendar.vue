@@ -10,16 +10,18 @@
                 <thead>
                     <tr>
                         <td>会议室</td>
+                        <td>时间</td>
                         <td v-for="item in mt_date">
                             {{ item }}
                         </td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="r in mt_room">
-                        <td>{{ r }}</td>
+                    <tr v-for="r in mt_room.length * mt_time.length">
+                        <td>{{ mt_room[ r % mt_time.length] }}</td>
+                        <td>{{ mt_time[ r % mt_time.length] }}</td>
                         <td v-for="item in mt_date">
-                            {{ item }}
+                           
                         </td>
                     </tr>
                 </tbody>
