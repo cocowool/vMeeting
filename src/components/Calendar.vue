@@ -18,8 +18,8 @@
                 </thead>
                 <tbody>
                     <tr v-for="r in mt_room.length * mt_time.length">
-                        <td>{{ mt_room[ r % mt_time.length] }}</td>
-                        <td>{{ mt_time[ r % mt_time.length] }}</td>
+                        <td>{{ mt_room[ Math.ceil(r / mt_time.length) - 1] }}</td>
+                        <td>{{ mt_time[ (r-1) % mt_time.length] }}</td>
                         <td v-for="item in mt_date">
                            
                         </td>
