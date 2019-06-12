@@ -7,9 +7,17 @@
         </div>
         <div>
             <table class="table table-striped">
-                <tbody>
-
+                <thead>
                     <tr>
+                        <td>会议室</td>
+                        <td v-for="item in mt_date">
+                            {{ item }}
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="r in mt_room">
+                        <td>{{ r }}</td>
                         <td v-for="item in mt_date">
                             {{ item }}
                         </td>
