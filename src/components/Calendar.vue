@@ -7,26 +7,30 @@
         </div>
         <div>
             <table class="table table-striped">
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>C</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>C</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>C</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
 </template>
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default {
     name: 'calendar',
     watch: {
