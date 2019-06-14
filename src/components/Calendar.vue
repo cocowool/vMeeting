@@ -26,6 +26,10 @@
                     </tr>
                 </tbody>
             </table>
+            <div>
+                <a href="javascript:void(0);" v-on:click="prevWeek">上一周</a>
+                <a href="javascript:void(0);" v-on:click="nextWeek">上一周</a>
+            </div>
         </div>
     </div>
 </template>
@@ -39,6 +43,14 @@ export default {
             mt_date : ['Monday', 'Tuesday', 'Wednesday', "Thursday", 'Friday'],
             mt_time : ['8:30-9:30', '9:30-10:30', '10:30-11:30', '13:30-14:30', '15:30-16:30', '16:30-17:30'],
             mt_room : ['1308', '1303', '1304', '1305', '1306'],
+        }
+    },
+    methods: {
+        prevWeek : function(){
+            console.log('Prev Week');
+        },
+        nextWeek : function(){
+            console.log('Next Week');
         }
     },
     watch: {
