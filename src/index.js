@@ -5,6 +5,9 @@ import Vue from 'vue'
 import Main from './components/Main.vue'
 import Home from './components/Home.vue'
 import Calendar from './components/Calendar.vue'
+import Week from './components/Week.vue'
+import Month from './components/Month.vue'
+
 import About from './components/About.vue'
 import Meeting from './components/Meeting.vue'
 import VueRouter from 'vue-router'
@@ -16,8 +19,8 @@ var mt_room = ['1308', '1303', '1304', '1305', '1306'];
 Vue.use(VueRouter)
 const routes = [
     { path: '/', component: Home },
-    { path: '/cal', component: Calendar }, 
-    { path: '/cal/:mode', component: Calendar },
+    { path: '/cal', component: Week }, 
+    { path: '/cal/:mode', component: Month },
     { path: '/about', component: About },
     { path: '/meeting/:id', component: Meeting }
     // { path: '*', component: Home }
