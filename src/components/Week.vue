@@ -35,6 +35,7 @@
 </template>
 <script>
 // import 'bootstrap/dist/css/bootstrap.min.css';
+var moment = require('moment');
 
 export default {
     name: 'week',
@@ -53,7 +54,7 @@ export default {
                 // console.log(d);
                 // console.log(this.start_date + d*24*60*60*1000);
                 // console.log(new Date(this.start_date.getTime() + d*24*60*60*1000) );
-                i.push(new Date(this.start_date.getTime() + d*24*60*60*1000) );
+                i.push( moment(new Date(this.start_date.getTime() + d*24*60*60*1000)).format("YYYY-M-D") );
             }
 
             return i;
