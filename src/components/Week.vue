@@ -11,16 +11,16 @@
                     <tr>
                         <td>会议室</td>
                         <td>时间</td>
-                        <td v-for="item in weekDays">
+                        <td v-for="item in weekDays" :key="item">
                             {{ item }}
                         </td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="r in mt_room.length * mt_time.length">
+                    <tr v-for="r in mt_room.length * mt_time.length" :key="r">
                         <td>{{ mt_room[ Math.ceil(r / mt_time.length) - 1] }}</td>
                         <td>{{ mt_time[ (r-1) % mt_time.length] }}</td>
-                        <td v-for="item in weekDays" v-on:mouseenter="displayReserve" v-on:mouseleave="closeReserve">
+                        <td v-for="item in weekDays" :key="item" v-on:mouseenter="displayReserve" v-on:mouseleave="closeReserve">
                             <a href="javascript:void(0);" v-bind:style="{ display: reserveButton }" >我要预定</a>
                         </td>
                     </tr>
