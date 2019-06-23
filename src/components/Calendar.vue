@@ -20,7 +20,7 @@
                     <tr v-for="r in mt_room.length * mt_time.length">
                         <td>{{ mt_room[ Math.ceil(r / mt_time.length) - 1] }}</td>
                         <td>{{ mt_time[ (r-1) % mt_time.length] }}</td>
-                        <td v-for="item in mt_date">
+                        <td v-for="item in mt_date" v－on:click="displayReserve">
                            
                         </td>
                     </tr>
@@ -29,6 +29,7 @@
             <div>
                 <a href="javascript:void(0);" v-on:click="prevWeek">上一周</a>
                 <a href="javascript:void(0);" v-on:click="nextWeek">上一周</a>
+                <a href="javascript:void(0);" v-on:click="displayReserve">限时预定</a>
             </div>
         </div>
     </div>
@@ -46,6 +47,9 @@ export default {
         }
     },
     methods: {
+        displayReserve : function(){
+            console.log('Reserve Starting...')
+        },
         prevWeek : function(){
             console.log('Prev Week');
         },
