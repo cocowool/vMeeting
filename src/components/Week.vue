@@ -20,8 +20,8 @@
                     <tr v-for="m in mt_room.length * mt_time.length" :key="m">
                         <td>{{ mt_room[ Math.ceil(m / mt_time.length) - 1] }}</td>
                         <td>{{ mt_time[ (m-1) % mt_time.length] }}</td>
-                        <td v-for="n in weekDays.length" :key="n" v-on:mouseenter="displayReserve" v-on:mouseleave="closeReserve">
-                            <a href="javascript:void(0);" v-bind:style="{ display: reserveButton }" >我要预定</a>
+                        <td v-for="n in weekDays.length" :key="n" v-on:mouseenter="active = !active" v-on:mouseleave="active = !active">
+                            <a href="javascript:void(0);" v-if="active" >我要预定</a>
                             {{ m + "," + n }}
                         </td>
                     </tr>
@@ -46,7 +46,8 @@ export default {
             mt_time : ['8:30-9:30', '9:30-10:30', '10:30-11:30', '13:30-14:30', '15:30-16:30', '16:30-17:30'],
             mt_room : ['1308', '1303', '1304', '1305', '1306'],
             start_date : new Date(),
-            reserveButton : 'none'
+            reserveButton : 'none',
+            active : false
         }
     },
     computed : {
@@ -64,6 +65,7 @@ export default {
     },
     methods: {
         displayReserve: function(){
+            console.log(this);
             this.reserveButton = "block";
             console.log('Reserver starting ... ')
             // this.html('<a href="javascript:void">我要预定</a>')
