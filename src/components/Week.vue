@@ -21,7 +21,7 @@
                         <td>{{ mt_room[ Math.ceil(r / mt_time.length) - 1] }}</td>
                         <td>{{ mt_time[ (r-1) % mt_time.length] }}</td>
                         <td v-for="item in weekDays" v-on:mouseenter="displayReserve" v-on:mouseleave="closeReserve">
-                           
+                            <a href="javascript:void(0);" v-bind:style="{ display: reserveButton }" >我要预定</a>
                         </td>
                     </tr>
                 </tbody>
@@ -44,7 +44,8 @@ export default {
             mt_date : ['2019-5-23', '2019-5-24', '2019-5-25', '2019-5-26', '2019-5-27'],
             mt_time : ['8:30-9:30', '9:30-10:30', '10:30-11:30', '13:30-14:30', '15:30-16:30', '16:30-17:30'],
             mt_room : ['1308', '1303', '1304', '1305', '1306'],
-            start_date : new Date()
+            start_date : new Date(),
+            reserveButton : 'none'
         }
     },
     computed : {
@@ -62,10 +63,12 @@ export default {
     },
     methods: {
         displayReserve: function(){
+            this.reserveButton = "block";
             console.log('Reserver starting ... ')
             // this.html('<a href="javascript:void">我要预定</a>')
         },
         closeReserve: function(){
+            this.reserveButton = "none";
             console.log('Close reserve ... ')
         },
         prevWeek : function(){
