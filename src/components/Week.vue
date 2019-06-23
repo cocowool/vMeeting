@@ -11,7 +11,7 @@
                     <tr>
                         <td>会议室</td>
                         <td>时间</td>
-                        <td v-for="item in mt_date">
+                        <td v-for="item in weekDays">
                             {{ item }}
                         </td>
                     </tr>
@@ -20,7 +20,7 @@
                     <tr v-for="r in mt_room.length * mt_time.length">
                         <td>{{ mt_room[ Math.ceil(r / mt_time.length) - 1] }}</td>
                         <td>{{ mt_time[ (r-1) % mt_time.length] }}</td>
-                        <td v-for="item in mt_date">
+                        <td v-for="item in weekDays">
                            
                         </td>
                     </tr>
@@ -40,13 +40,28 @@ export default {
     name: 'week',
     data: function(){
         return {
-            mt_date : ['Monday', 'Tuesday', 'Wednesday', "Thursday", 'Friday'],
+            mt_date : ['2019-5-23', '2019-5-24', '2019-5-25', '2019-5-26', '2019-5-27'],
             mt_time : ['8:30-9:30', '9:30-10:30', '10:30-11:30', '13:30-14:30', '15:30-16:30', '16:30-17:30'],
             mt_room : ['1308', '1303', '1304', '1305', '1306'],
+            start_date : new Date()
+        }
+    },
+    computed : {
+        weekDays : function(){
+            var i = new Array();
+            for( var d = 1;d<=7;d++){
+                // console.log(d);
+                // console.log(this.start_date + d*24*60*60*1000);
+                // console.log(new Date(this.start_date.getTime() + d*24*60*60*1000) );
+                i.push(new Date(this.start_date.getTime() + d*24*60*60*1000) );
+            }
+
+            return i;
         }
     },
     methods: {
         prevWeek : function(){
+            // console.log(this.weekDays);
             console.log('Prev Week');
         },
         nextWeek : function(){
