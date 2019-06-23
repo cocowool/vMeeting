@@ -17,11 +17,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="r in mt_room.length * mt_time.length" :key="r">
-                        <td>{{ mt_room[ Math.ceil(r / mt_time.length) - 1] }}</td>
-                        <td>{{ mt_time[ (r-1) % mt_time.length] }}</td>
-                        <td v-for="item in weekDays" :key="item" v-on:mouseenter="displayReserve" v-on:mouseleave="closeReserve">
+                    <tr v-for="m in mt_room.length * mt_time.length" :key="m">
+                        <td>{{ mt_room[ Math.ceil(m / mt_time.length) - 1] }}</td>
+                        <td>{{ mt_time[ (m-1) % mt_time.length] }}</td>
+                        <td v-for="n in weekDays.length" :key="n" v-on:mouseenter="displayReserve" v-on:mouseleave="closeReserve">
                             <a href="javascript:void(0);" v-bind:style="{ display: reserveButton }" >我要预定</a>
+                            {{ m + "," + n }}
                         </td>
                     </tr>
                 </tbody>
