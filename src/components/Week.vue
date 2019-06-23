@@ -6,7 +6,7 @@
             <router-link to="/meeting/add">会议预订</router-link>
         </div>
         <div>
-            <table class="table table-striped">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
                         <td>会议室</td>
