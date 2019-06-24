@@ -20,9 +20,8 @@
                     <tr v-for="m in mt_room.length * mt_time.length" :key="m">
                         <td>{{ mt_room[ Math.ceil(m / mt_time.length) - 1] }}</td>
                         <td>{{ mt_time[ (m-1) % mt_time.length] }}</td>
-                        <td v-for="n in weekDays.length" :key="n" v-on:mouseenter="active = !active" v-on:mouseleave="active = !active">
-                            <a href="javascript:void(0);" v-if="active" >我要预定</a>
-                            {{ m + "," + n }}
+                        <td v-for="n in weekDays.length" :key="n" class="btn-reserve">
+                            <a href="javascript:void(0);">我要预定</a>
                         </td>
                     </tr>
                 </tbody>
