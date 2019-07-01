@@ -21,11 +21,15 @@
                         <td>{{ mt_room[ Math.ceil(m / mt_time.length) - 1] }}</td>
                         <td>{{ mt_time[ (m-1) % mt_time.length] }}</td>
                         <td v-for="n in weekDays.length" :key="n" class="btn-reserve">
-                            <a href="javascript:void(0);">我要预定</a>
+                            <a v-b-modal.reserve-modal href="javascript:void(0);">我要预定</a>
+                            <b-button v-b-modal.reserve-modal>Launch demo modal</b-button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <b-modal id="reserve-modal" title="会议室预定">
+                <p class="my-4">Hello from modal!</p>
+            </b-modal>
             <div>
                 <a href="javascript:void(0);" v-on:click="prevWeek">上一周</a>
                 <a href="javascript:void(0);" v-on:click="nextWeek">上一周</a>

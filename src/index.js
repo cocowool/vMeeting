@@ -17,7 +17,9 @@ import BootstrapVue from 'bootstrap-vue'
 var mt_time = ['8:30-9:30', '9:30-10:30', '10:30-11:30', '13:30-14:30', '15:30-16:30', '16:30-17:30'];
 var mt_room = ['1308', '1303', '1304', '1305', '1306'];
 
-Vue.use(VueRouter, BootstrapVue)
+Vue.use(VueRouter)
+Vue.use(BootstrapVue)
+
 const routes = [
     { path: '/', component: Home },
     { path: '/cal', component: Week }, 
