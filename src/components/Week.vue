@@ -26,7 +26,7 @@
                     </tr>
                 </tbody>
             </table>
-            <b-modal id="reserve-modal" title="会议室预定">
+            <b-modal id="reserve-modal" title="会议室预定" ok-title="提交" cancel-title="取消">
                 <p class="my-4">会议名称</p>
             </b-modal>
             <div>
