@@ -27,6 +27,11 @@
                 </tbody>
             </table>
             <b-modal size="lg" centered id="reserve-modal" title="会议室预定" ok-title="提交" cancel-title="取消">
+                <b-form @submit="onSubmit" @reset="onReset">
+                    <b-form-group>
+                        <b-form-input id="meetingName" v-model="form.meetingName" type="text" required placeholder="请输入会议名称"></b-form-input>
+                    </b-form-group>
+                </b-form>
                 <p class="my-4">会议名称</p>
             </b-modal>
             <div>
@@ -44,6 +49,11 @@ export default {
     name: 'week',
     data: function(){
         return {
+            form : {
+                "meetingName" : '',
+                "meetingRoom" : '',
+                "meetingTime" : ''
+            },
             mt_date : ['2019-5-23', '2019-5-24', '2019-5-25', '2019-5-26', '2019-5-27'],
             mt_time : ['8:30-9:30', '9:30-10:30', '10:30-11:30', '13:30-14:30', '15:30-16:30', '16:30-17:30'],
             mt_room : ['1308', '1303', '1304', '1305', '1306'],
@@ -82,6 +92,13 @@ export default {
         },
         nextWeek : function(){
             console.log('Next Week');
+        },
+        onSumit(evt) {
+            evt.preventDefault();
+            console.log(JSON.stringify(this.form))
+        },
+        onReset(){
+            console.log("Form reset")
         }
     },
     watch: {
