@@ -8,7 +8,8 @@ module.exports = {
     module: {
         rules: [
             { test: /\.vue$/, loader: 'vue-loader', exclude: '/node_modules/'},
-            { test: /\.css$/, use: [ 'style-loader', 'css-loader'] }
+            { test: /\.css$/, use: [ 'style-loader', 'css-loader'] },
+            { test: /\.sass$/, use: ['style-loader', 'css-loader', 'sass-loader'] }
         ]
     },
     plugins: [
