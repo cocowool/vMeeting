@@ -8,3 +8,15 @@ $nav-color: green;
 #top-menu {
     background-color: $nav-color;
 }
+
+foot {
+    margin-top: 10px;
+
+    a {
+        color: #000;
+    }
+
+    a:hover {
+        color: #006633;
+    }
+}
