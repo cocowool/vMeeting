@@ -1,7 +1,7 @@
 //Import bootstrap style
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-import sass from './css/main.scss';
+import sass from './scss/main.scss';
 
 import Vue from 'vue'
 import Main from './components/Main.vue'
