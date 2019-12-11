@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const ExtractTextPlugin = rquire('extract-text-webpack-plugin')
 
 module.exports = {
     mode: "development",
@@ -9,7 +10,8 @@ module.exports = {
         rules: [
             { test: /\.vue$/, loader: 'vue-loader', exclude: '/node_modules/'},
             { test: /\.css$/, use: [ 'style-loader', 'css-loader'] },
-            { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] }
+            //{ test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] } //这个方式将css打包进了js文件
+            { test: /\.scss$/, use: ExtractTextPlugin.extract({use:['css-loader', 'sass-loader'], fallback: 'style-loader'})}
         ]
     },
     plugins: [
