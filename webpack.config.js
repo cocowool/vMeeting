@@ -17,7 +17,7 @@ module.exports = {
                 options: {
                     publicPath: '../dist'
                 }
-            }, 'style-loader', 'css-loader', 'sass-loader']}
+            }, 'css-loader', 'sass-loader']}
         ]
     },
     plugins: [
